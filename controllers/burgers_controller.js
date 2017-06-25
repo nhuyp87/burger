@@ -1,5 +1,5 @@
 var express = require("express");
-var burgers = require("../models/burgers.js");
+var burgers = require("../models/burger.js");
 
 // Create and export router. 
 
@@ -39,6 +39,14 @@ router.put("/:id", function(req, res) {
   });
 });
 
+
+router.delete("/:id", function(req, res) {
+  var condition = "id = " + req.params.id;
+
+  burgers.delete(condition, function() {
+    res.redirect("/");
+  });
+});
 
 // Export routes for server.js to use.
 module.exports = router;

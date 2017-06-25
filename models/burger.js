@@ -1,5 +1,5 @@
 // Dependencies
-var orm = require("../../config/orm.js");
+var orm = require("../config/orm.js");
 
 // Add code to call ORM functions using burger specific input for ORM. 
 
@@ -17,6 +17,12 @@ var burger = {
   },
   update: function(objColVals, condition, cb) {
     orm.update("burgers", objColVals, condition, function(res) {
+      cb(res);
+    });
+  },
+
+  delete: function(condition, cb) {
+    orm.delete("burgers", condition, function(res) {
       cb(res);
     });
   }

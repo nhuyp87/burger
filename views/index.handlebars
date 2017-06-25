@@ -2,8 +2,9 @@
 
 <h1>Eat Da Burger!</h1>
 
-<img src="../../public/assets/images/burger.jpg"/>
+<img src="assets/images/burger.jpg"/>
 
+<h2>Eat These Burgers!</h2>
 <ul>
   {{#each burgers}}
     {{#unless this.devoured}}
@@ -24,7 +25,7 @@
 <h2>Devoured Burgers!</h2>
 
 <ul>
-  {{#each cats}}
+  {{#each burgers}}
     {{#if this.devoured}}
       <li>
         {{this.burger_name}}
