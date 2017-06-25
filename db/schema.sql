@@ -5,12 +5,8 @@ USE burgers_db;
 CREATE TABLE burgers (
 	id INTEGER(11) auto_increment NOT NULL, 
     burger_name VARCHAR(30) NOT NULL, 
-    devoured BOOLEAN NOT NULL DEFAULT 0, , 
-    date timestamp(10),
+    devoured BOOLEAN NOT NULL DEFAULT 0, 
+    date timestamp DEFAULT CURRENT_TIMESTAMP,
     PRIMARY KEY (id)
 );
 
-INSERT INTO burgers 
-	(burger_name, devoured, date) 
-VALUES 
-	

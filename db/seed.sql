@@ -1,7 +1,6 @@
 INSERT INTO burgers 
-	(name, coolness_points, attitudes) 
+	(burger_name, devoured)
 VALUES 
-	("Jerry Seinfeld", "10", null),
-    ("Kramer", "10", null),
-    ("Elaine Benes", "10", null), 
-    ("George Costanza", "10", null); 
+	("bacon cheese burger", 0),
+    ("veggie burger", 0),
+    ("turkey burger", 0);
